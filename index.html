@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho - AgroTec</title>
+    <style>
+        /* Cores principais: Laranja (#FF6600), Laranja Claro (#FF9933), Fundo (#FFF5EE) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #FFF5EE;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #FF6600, #FF9933);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid #FF6600;
+        }
+
+        h2 {
+            color: #FF6600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Estilo da Calculadora Interativa */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #FF6600;
+            outline: none;
+        }
+
+        button {
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #E65500;
+        }
+
+        .resultado {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: #FFF0E6;
+            border-radius: 6px;
+            border: 1px dashed #FF6600;
+            display: none;
+        }
+
+        /* Dica do dia */
+        .dica-box {
+            background-color: #FF9933;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer span {
+            color: #FF9933;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AgroTec Sustentável</h1>
+        <p>Inovação e Consciência no Projeto Agrinho 2026</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>🌱 O Agro e a Tecnologia</h2>
+            <p>O futuro da agricultura está na tecnologia aplicada de forma consciente. Através do monitoramento correto e de práticas sustentáveis, podemos aumentar a produção de alimentos reduzindo drasticamente o consumo de recursos naturais como a água e o solo.</p>
+        </section>
+
+        <section class="card">
+            <h2>💧 Calculadora de Irrigação Inteligente</h2>
+            <p style="margin-bottom: 1rem;">Descubra a estimativa de economia de água ao adotar sistemas de gotejamento automatizado em vez da irrigação tradicional por aspersão.</p>
+            
+            <div class="form-group">
+                <label for="area">Tamanho da área de plantio (em hectares):</label>
+                <input type="number" id="area" placeholder="Ex: 5" min="1">
+            </div>
+            
+            <button onclick="calcularEconomia()">Calcular Economia de Água</button>
+
+            <div id="resultado" class="resultado"></div>
+        </section>
+
+        <section class="card">
+            <h2>💡 Dica de Sustentabilidade</h2>
+            <div class="dica-box" id="dica-campo">
+                Carregando uma dica valiosa para o campo...
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido para o <span>Concurso Agrinho 2026</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
