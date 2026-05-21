@@ -1,1 +1,196 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E PALETA DE CORES
+   Laranja Principal: #FF6600 | Laranja Claro: #FF9933 | Fundo: #FFF5EE
+   ========================================================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FFF5EE; /* Tom suave de areia/laranja bem claro */
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   HEADER (TOPO)
+   ========================================================================== */
+
+header {
+    background: linear-gradient(135deg, #FF6600, #FF9933);
+    color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL E CARDS
+   ========================================================================== */
+
+main {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #FF6600; /* Detalhe marcante em laranja */
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    color: #FF6600;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555555;
+}
+
+/* ==========================================================================
+   FORMULÁRIO E CALCULADORA INTERATIVA
+   ========================================================================== */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: #444444;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar no campo de digitação */
+input:focus {
+    border-color: #FF6600;
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+    outline: none;
+}
+
+button {
+    background-color: #FF6600;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(255, 102, 0, 0.2);
+}
+
+button:hover {
+    background-color: #E65500; /* Laranja mais escuro no hover */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Painel de Resultado da Calculadora */
+.resultado {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #FFF0E6; /* Fundo de alerta suave */
+    border-radius: 8px;
+    border: 2px dashed #FF6600;
+    display: none; /* Controlado pelo JavaScript */
+    animation: fadeIn 0.5s ease;
+}
+
+/* ==========================================================================
+   COMPONENTE DE DICAS (DESTAQUE LARANJA)
+   ========================================================================== */
+
+.dica-box {
+    background: linear-gradient(135deg, #FF9933, #FF6600);
+    color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(255, 153, 51, 0.3);
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 5rem;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+footer span {
+    color: #FF9933;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   ANIMAÇÕES E RESPONSIVIDADE
+   ========================================================================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
